@@ -5,7 +5,7 @@ def parenthesis_equal?(p)
   closing = []
   p_array = p.split("")
   if p_array[0] == ")" || p_array[-1] == "(" || p_array.length.odd?
-    puts "false"
+    true
   else
     p_array.each do |par|
       if par == "("
@@ -16,9 +16,13 @@ def parenthesis_equal?(p)
       end
     end
       if opening.length == closing.length
-        puts "true"
+        true
       else
-        puts "false"
+        false
       end
   end
 end
+
+string = "()()()(()()()"
+
+parenthesis_equal?(string)
