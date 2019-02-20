@@ -1,11 +1,12 @@
 require 'pry'
-def parenthesis_equal?(p)
-  array = []
-  p_array = p.split("")
+
+  def parenthesis_equal?(p)
+    array = []
+    p_array = p.split("")
     p_array.each do |par|
       case par
       when "("
-        array << par
+          array << par
       when ")"
         if array.empty?
           false
@@ -17,6 +18,6 @@ def parenthesis_equal?(p)
   end
 
 
-string = "((()))"
+string = "(())"
 
 parenthesis_equal?(string)
