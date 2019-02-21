@@ -21,20 +21,20 @@ require 'pry'
   array = []
   p_array = p.split("")
     if p_array[0] != ")"
-    p_array.each do |par|
-      case par
-      when "("
-          array << par
-          puts array
-      when ")"
-        if !array.empty?
-            array.pop
+      p_array.each do |par|
+        case par
+        when "("
+            array << par
+            puts array
+        when ")"
+          if !array.empty?
+              array.pop
+          end
         end
       end
-    end
-    array.empty?
-  else
-    false
+      array.empty?
+    else
+      false
   end
 end
 
