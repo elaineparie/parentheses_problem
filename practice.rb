@@ -8,12 +8,12 @@ require 'pry'
       when "("
           array << par
       when ")"
-      puts "false" if array.empty?
+      return false if array.empty?
           array.pop
       end
     end
       if !array.empty?
-        puts "false"
+        return false
       end
   end
 
