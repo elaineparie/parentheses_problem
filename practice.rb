@@ -10,7 +10,6 @@ require 'pry'
       when ")"
         if array.empty?
           false
-          break
         end
         array.pop
       end
