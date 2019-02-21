@@ -8,15 +8,16 @@ require 'pry'
       when "("
           array << par
       when ")"
-        if array.empty?
-          false
-        end
-        array.pop
+      puts "false" if array.empty?
+          array.pop
       end
+    end
+    if !array.empty?
+      puts "false"
     end
   end
 
 
-string = "(())"
+string = "((()))"
 
 parenthesis_equal?(string)
